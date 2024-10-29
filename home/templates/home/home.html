@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Eventify{% endblock %}</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .hero {
+            background-size: cover;
+            height: 400px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+        }
+        .hero p {
+            font-size: 1.25rem;
+        }
+        .btn-custom {
+            margin: 10px;
+        }
+        .event-card {
+            margin-bottom: 30px;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .testimonial {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Eventify <i class="fas fa-calendar-alt"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#events"><i class="fas fa-calendar-alt"></i> Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#reviews"><i class="fas fa-comments"></i> reviews</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact"><i class="fas fa-envelope"></i> Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-user"></i> Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Welcome to the Eventify</h1>
+        <p>Manage and Create Your Events with Ease</p>
+        <a href="#events" class="btn btn-primary btn-lg btn-custom">View Events</a>
+        <a href="" class="btn btn-secondary btn-lg btn-custom">New Event</a>
+    </div>
+
+    <!-- Events Section -->
+    <div class="container mt-5" id="events">
+        <h2 class="text-center mb-4">Upcoming Events</h2>
+        <div class="row">
+            <div class="col-md-4 event-card">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Event 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Event Title 1</h5>
+                        <p class="card-text">Brief description of the event. Date: MM/DD/YYYY</p>
+                        <a href="#" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 event-card">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Event 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Event Title 2</h5>
+                        <p class="card-text">Brief description of the event. Date: MM/DD/YYYY</p>
+                        <a href="#" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 event-card">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Event 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Event Title 3</h5>
+                        <p class="card-text">Brief description of the event. Date: MM/DD/YYYY</p>
+                        <a href="#" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- reviews Section -->
+    <div class="container mt-5" id="reviews">
+        <h2 class="text-center mb-4">What Our Users Say</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <p>"This platform has made event management a breeze!"</p>
+                    <p>- User 1</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <p>"I love the user-friendly interface and the great support."</p>
+                    <p>- User 2</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <p>"Highly recommend it for anyone looking to organize events."</p>
+                    <p>- User 3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div class="container mt-5" id="contact">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Your message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <span>&copy; 2024 Eventify. All rights reserved.</span><br>
+            <a href="#events" class="text-white">Events</a> | 
+            <a href="#reviews" class="text-white">reviews</a> | 
+            <a href="#contact" class="text-white">Contact Us</a>
+        </div>
+    </footer>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
